@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    font-family: 'montserrat';
+    font-weight: 400
+}
+
+body{
+    font-family: 'montserrat';
+    font-weight: 500;
+}
+
+.first-page{
+    background-image: url("../images/model-s.png") ;
+    background-repeat: no-repeat;
+    background-position:center top;
+    background-size:auto 55vh;
+    height: fit-content;
+}
+
+header{
+    opacity: 1;
+
+    display: flex;
+    justify-content: space-between;
+    height: 6vh;
+}
+
+img.logo{
+    height: 1.5vh;
+    margin: 2.5vh;
+}
+
+.menu-item{
+    background-color: #999;
+    opacity: 0.5;
+    border-radius: 12px;
+    margin: 12px;
+    color: white;
+    padding: 5px 10px;
+}
+a{
+    color: black;
+    font-size: 16px;
+    letter-spacing: 0;
+    font-weight: 700;
+}
+
+
+.widescreen-menu{
+    display: none;
+}
+
+.mobile-menu{
+    display: none;
+}
+
+.hero{
+    width: 100vw;
+    padding-bottom:2vh;
+}
+
+.title{
+    text-align: center;
+}
+
+.title h1{
+    font-size: 32px;
+    margin-bottom: 30vh;
+}
+
+.title h2{
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 0vh;
+}
+
+span{
+    text-decoration: underline;
+}
+
+.login-page{
+    background-image: url('../images/elon-musk.jpg');
+}
+
+.login-card{
+    margin: 5vw 5vh;
+}
+
+footer nav ul{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer nav ul li a{
+    font-size: 10px;
+    flex: 1;
+}
