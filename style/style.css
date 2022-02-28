@@ -29,12 +29,11 @@ body{
     background-position:center top;
     background-size:auto 55vh;
     height: fit-content;
-    filter: blur(5px);
+    filter: blur(0px);
 }
 
 header{
     opacity: 1;
-
     display: flex;
     justify-content: space-between;
     height: 6vh;
@@ -52,8 +51,10 @@ img.logo{
     margin: 12px;
     color: white;
     padding: 5px 10px;
-    display: none;
+    z-index: 100;
 }
+
+
 a{
     color: black;
     font-size: 16px;
@@ -68,16 +69,16 @@ a{
 
 .mobile-menu{
     position: absolute;
-    z-index: 1;
+    z-index: 0;
     background-color: white;
     height: 100vh;
     width: 80vw;
-    left: 20vw;
+    left: 100vw;
     top: 0vh;
-    box-shadow: -1px 0px 1px black;
+    box-shadow: -0.5px 0px 1px black;
     overflow-x: hidden;
     overflow-y: auto;
-    /*display: none;*/
+    transition: left 0.5s;
 }
 
 .x-button{
@@ -139,7 +140,7 @@ span{
 }
 
 .login-page{
-    background-image: url('../images/elon-musk.jpg');
+    background-image: url('../images/elon-musk-dogecoin.jpg');
     background-repeat: no-repeat;
     background-position: center top;
     background-size:auto 45vh;
@@ -148,22 +149,22 @@ span{
     flex-direction: row;
     justify-content: center;
     margin-bottom: 2vh;
-    filter: blur(5px);
+    filter: blur(0);
 }
 
 .login-card{
     padding: 1vh 2vw;
     text-align: center;
-    background-color: #7695a7;
+    background-color: #deac55;
     width: fit-content;
     margin-left:  5vw;
     margin-right: 5vw;
     height: fit-content;
     border-radius: 20px;
-    filter:opacity(0.9);
+    filter:opacity(0.8);
     align-self: flex-end;
     margin-bottom: 2vh;
-    box-shadow: 2px 2px 2px #272c40;
+    box-shadow: 2px 2px 2px #black;
 }
 
 .login-card h1{
