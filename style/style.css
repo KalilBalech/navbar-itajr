@@ -20,6 +20,7 @@ a{
 body{
     font-family: 'montserrat';
     font-weight: 500;
+    position: relative;
 }
 
 .first-page{
@@ -28,6 +29,7 @@ body{
     background-position:center top;
     background-size:auto 55vh;
     height: fit-content;
+    filter: blur(5px);
 }
 
 header{
@@ -50,6 +52,7 @@ img.logo{
     margin: 12px;
     color: white;
     padding: 5px 10px;
+    display: none;
 }
 a{
     color: black;
@@ -64,7 +67,50 @@ a{
 }
 
 .mobile-menu{
-    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    height: 100vh;
+    width: 80vw;
+    left: 20vw;
+    top: 0vh;
+    box-shadow: -1px 0px 1px black;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /*display: none;*/
+}
+
+.x-button{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+button{
+    background-color: white;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 30px;
+}
+
+.mobile-menu nav ul li{
+    margin-top: 2.4vh;
+    margin-left: 10vw;
+}
+
+.mobile-menu nav ul li:first-child{
+    margin-top: 1vh;
+}
+
+.mobile-menu nav ul li:last-child{
+    margin-bottom: 55vh;
+}
+
+.mobile-menu nav ul li a{
+    font-weight: 500;
+    font-size: 15px;
 }
 
 .hero{
@@ -94,10 +140,69 @@ span{
 
 .login-page{
     background-image: url('../images/elon-musk.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size:auto 45vh;
+    height: 45vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 2vh;
+    filter: blur(5px);
 }
 
 .login-card{
-    margin: 5vw 5vh;
+    padding: 1vh 2vw;
+    text-align: center;
+    background-color: #7695a7;
+    width: fit-content;
+    margin-left:  5vw;
+    margin-right: 5vw;
+    height: fit-content;
+    border-radius: 20px;
+    filter:opacity(0.9);
+    align-self: flex-end;
+    margin-bottom: 2vh;
+    box-shadow: 2px 2px 2px #272c40;
+}
+
+.login-card h1{
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    color: white;
+    font-weight: 400;
+}
+
+.login-card h2{
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 2vh;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input{
+    display: block;
+    border: none;
+    margin-bottom: 1vh;
+    width: ;
+    padding: 5px 10px;
+    border-radius: 5px;
+    outline: 0;
+}
+
+input[type='submit']{
+    width: fit-content;
+    color: black;
+}
+
+input:focus{
+    outline: 0;
+    box-shadow: 0;
 }
 
 footer nav ul{
@@ -106,7 +211,14 @@ footer nav ul{
     text-align: center;
 }
 
+footer nav ul li{
+    margin-bottom: 1.4vh;
+}
+
 footer nav ul li a{
-    font-size: 10px;
+    font-size: 13px;
+    letter-spacing: 0;
+    font-weight: 500;
     flex: 1;
+    color: #555;
 }
