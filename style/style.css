@@ -20,15 +20,32 @@ a{
 body{
     font-family: 'montserrat';
     font-weight: 500;
+    width: 100vw;
     position: relative;
+    overflow-x: hidden;
 }
+
+body::-webkit-scrollbar {
+    width: 2px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: transparent       /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: black;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+  /* creates padding around scroll thumb */
+  }
+  
 
 .first-page{
     background-image: url("../images/model-s.png") ;
     background-repeat: no-repeat;
     background-position:center top;
-    background-size:auto 55vh;
-    height: fit-content;
+    background-size:cover;
+    height: 60vh;
     filter: blur(0px);
 }
 
@@ -40,8 +57,9 @@ header{
 }
 
 img.logo{
-    height: 1.5vh;
-    margin: 2.5vh;
+    height: 15px;
+    margin-left: 20px;
+    margin-top: 20px;
 }
 
 .menu-item{
@@ -49,9 +67,7 @@ img.logo{
     opacity: 0.5;
     border-radius: 12px;
     margin: 12px;
-    color: white;
     padding: 5px 10px;
-    z-index: 100;
 }
 
 
@@ -73,12 +89,13 @@ a{
     background-color: white;
     height: 100vh;
     width: 80vw;
-    left: 100vw;
+    left: 20vw;
+    display: none;
     top: 0vh;
     box-shadow: -0.5px 0px 1px black;
     overflow-x: hidden;
     overflow-y: auto;
-    transition: left 0.5s;
+    /*transition: left 0.5s 0.1s, display 0.1s 0.0s;*/
 }
 
 .x-button{
@@ -121,11 +138,13 @@ button{
 
 .title{
     text-align: center;
+    width: 100vw;
 }
 
 .title h1{
     font-size: 32px;
-    margin-bottom: 30vh;
+    margin-bottom: 35vh;
+    margin-top: 5vh;
 }
 
 .title h2{
@@ -143,8 +162,8 @@ span{
     background-image: url('../images/elon-musk-dogecoin.jpg');
     background-repeat: no-repeat;
     background-position: center top;
-    background-size:auto 45vh;
-    height: 45vh;
+    background-size:cover;
+    height: 50vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -161,10 +180,10 @@ span{
     margin-right: 5vw;
     height: fit-content;
     border-radius: 20px;
-    filter:opacity(0.8);
+    filter:opacity(0.93);
     align-self: flex-end;
     margin-bottom: 2vh;
-    box-shadow: 2px 2px 2px #black;
+    box-shadow: 2px 2px 2px black;
 }
 
 .login-card h1{
@@ -190,7 +209,6 @@ input{
     display: block;
     border: none;
     margin-bottom: 1vh;
-    width: ;
     padding: 5px 10px;
     border-radius: 5px;
     outline: 0;
@@ -198,6 +216,7 @@ input{
 
 input[type='submit']{
     width: fit-content;
+    cursor: pointer;
     color: black;
 }
 
@@ -222,4 +241,156 @@ footer nav ul li a{
     font-weight: 500;
     flex: 1;
     color: #555;
+}
+
+@media only screen and (min-width:500px){
+
+    .new-item-prox, .new-item-no-style{
+        display: none;
+    }
+    .main-nav{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .new-item{
+        background-color: #999;
+        opacity: 0.5;
+        border-radius: 12px;
+        margin: 12px 0px 12px 6px;
+        padding: 5px 10px;
+        height: fit-content;
+    }
+    .new-item:first-child{
+        margin-left: 0;
+    }
+    .new-item-prox-prox{
+        display: none;
+    }
+    .new-item-prox-prox-prox{
+        display: none;
+    }
+    .new-item-prox-prox-prox-prox{
+        display: none;
+    }
+}
+
+@media only screen and (min-width:550px){
+
+    .new-item-prox{
+        display: block;
+        background-color: #999;
+        opacity: 0.5;
+        border-radius: 12px;
+        margin: 12px 0px 12px 6px;
+        padding: 5px 10px;
+        height: fit-content;
+    }
+    .new-item-prox-prox, .new-item-prox-no-style{
+        display: none;
+    }
+    .new-item-prox-prox-prox{
+        display: none;
+    }
+    .new-item-prox-prox-prox-prox{
+        display: none;
+    }
+}
+
+@media only screen and (min-width:650px){
+
+    .new-item-prox-prox{
+        display: block;
+        background-color: #999;
+        opacity: 0.5;
+        border-radius: 12px;
+        margin: 12px 0px 12px 6px;
+        padding: 5px 10px;
+        height: fit-content;
+    }
+    .new-item-prox-prox-prox, .new-item-prox-prox-no-style{
+        display: none;
+    }
+    .new-item-prox-prox-prox-prox{
+        display: none;
+    }
+}
+
+@media only screen and (min-width:750px){
+
+    .first-page{
+        height: 70vh;
+    }
+
+    .login-page{
+        height: 70vh;
+    }
+
+    .title h1{
+        margin-bottom: 45vh;
+    }
+
+    .new-item-prox-prox-prox{
+        display: block;
+        background-color: #999;
+        opacity: 0.5;
+        border-radius: 12px;
+        margin: 12px 0px 12px 6px;
+        padding: 5px 10px;
+        height: fit-content;
+    }
+    .new-item-prox-prox-prox-prox, .new-item-prox-prox-prox-no-style{
+        display: none;
+    }
+}
+
+@media only screen and (min-width:1000px){
+
+    .new-item-prox-prox-prox-prox-no-style{
+        display: none;
+    }
+
+    .first-page{
+        height: 100vh;
+    }
+
+    .title h1{
+        margin-bottom: 75vh;
+    }
+
+    .login-page{
+        height: 100vh;
+    }
+
+    .aside-menu ul{
+        display: flex;
+        margin-right: 12px;
+    }
+
+    .new-item-prox-prox-prox{
+        display: block;
+        background-color: #999;
+        opacity: 0.5;
+        border-radius: 12px;
+        margin: 12px 0px 12px 6px;
+        padding: 5px 10px;
+        height: fit-content;
+    }
+    .new-item-prox-prox-prox-prox{
+        display: block;
+        background-color: #999;
+        opacity: 0.5;
+        border-radius: 12px;
+        margin: 12px 0px 12px 6px;
+        padding: 5px 10px;
+        height: fit-content;
+    }
+
+    .menu-item{
+        background-color: #999;
+        opacity: 0.5;
+        border-radius: 12px;
+        margin: 12px 0px 12px 6px;
+        padding: 5px 10px;
+    }
 }
