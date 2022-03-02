@@ -159,16 +159,25 @@ button{
     height: 40px;
     background-size: contain;
     background-repeat: no-repeat;
-    animation: arrow-down 0.5s infinite alternate;
+    animation: arrow-down 1.5s infinite;
     animation-timing-function: ease-in;
 }
 
 @keyframes arrow-down{
-    from{
+    0%{
         padding-top: 0;
     }
-    to{
+    25%{
         padding-top: 12px;
+    }
+    50%{
+        padding-top: 0;
+    }
+    75%{
+        padding-top: 6px;
+    }
+    100%{
+        padding-top: 0px;
     }
 }
 
