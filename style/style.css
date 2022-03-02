@@ -151,7 +151,25 @@ button{
     color: white;
     font-size: 16px;
     font-weight: 300;
-    margin-bottom: 0vh;
+    margin-bottom: 1vh;
+}
+
+.arrow{
+    color: white;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: arrow-down 0.5s infinite alternate;
+    animation-timing-function: ease-in;
+}
+
+@keyframes arrow-down{
+    from{
+        padding-top: 0;
+    }
+    to{
+        padding-top: 12px;
+    }
 }
 
 span{
